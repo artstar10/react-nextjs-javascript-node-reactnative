@@ -28,7 +28,7 @@ function Home() {
            </style>
            <Container className="text-center">
             <h1 className="display-4">Temos a solução que a sua empresa precisa!</h1>
-            <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+            <p className="lead">O curso de Sistemas de Informação ofere competências em várias áreas de conhecimento, como por exemplo, as áreas de Engenharia de Software, Governança de TI e Ciência de Dados. Em Engenharia de Software, o aluno aplica todos os conceitos para analise, programação e manutenção de aplicações de software nas plataformas web e mobile, com o devido conhecimento em metodologias ágeis, modelagem e projeto de sistemas, banco de dados e gerenciamento de projetos. Em Governança de TI o curso prepara o aluno para atuar nas empresas como o objetivo de auxiliar no planejameno estratégico e na implantação de processos baseados em padrões de mercado, tais como ITIL, COBIT, CMMI, etc. Na área de ciência de dados, o aluno se prepara para o novo cenário mundial para tratamento dos dados, aprendendo conteúdos relacionados a Data Analytics, Python e aplicações contemplando Inteligência Artificial. Além dessas áreas mencionadas, o aluno pode atuar na área de infraestrutura e segurança da informação</p>
             <p className="lead">
               <a href="/orcamento" className="btn btn-outline-primary btn-lg mt-4">Orçamento</a>
             </p>
