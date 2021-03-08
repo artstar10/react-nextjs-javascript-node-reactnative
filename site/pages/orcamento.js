@@ -56,6 +56,11 @@ function Orcamento() {
            </FormGroup>
 
            <FormGroup>
+              <Label for="whatsApp">WhatsApp</Label>
+              <Input type="text" name="whatsApp" id="whatsApp" placeholder="(XX) XXXX-XXXX" />
+          </FormGroup>
+
+           <FormGroup>
               <Label for="projeto">Projeto</Label>
               <Input type="textarea" name="projeto" id="projeto" placeholder="Fale um pouco do seu projeto" />
            </FormGroup>
