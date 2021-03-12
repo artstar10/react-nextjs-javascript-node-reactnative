@@ -10,7 +10,7 @@ import Rodape from '../components/Rodape';
 
 library.add(fas);
 
-function Home() {
+function Home({ data }) {
     return (
        <div>
           <Head>
@@ -18,6 +18,9 @@ function Home() {
                 <meta name="description" content="Site de ... sobre ..." />
           </Head>
           <Menu />
+
+          {console.log(data)}
+          
           <Jumbotron fluid className="descr-top">
            <style>
              {`.descr-top{
@@ -27,10 +30,10 @@ function Home() {
              }`}
            </style>
            <Container className="text-center">
-            <h1 className="display-4">Temos a solução que a sua empresa precisa!</h1>
-            <p className="lead">O curso de Sistemas de Informação ofere competências em várias áreas de conhecimento, como por exemplo, as áreas de Engenharia de Software, Governança de TI e Ciência de Dados. Em Engenharia de Software, o aluno aplica todos os conceitos para analise, programação e manutenção de aplicações de software nas plataformas web e mobile, com o devido conhecimento em metodologias ágeis, modelagem e projeto de sistemas, banco de dados e gerenciamento de projetos. Em Governança de TI o curso prepara o aluno para atuar nas empresas como o objetivo de auxiliar no planejameno estratégico e na implantação de processos baseados em padrões de mercado, tais como ITIL, COBIT, CMMI, etc. Na área de ciência de dados, o aluno se prepara para o novo cenário mundial para tratamento dos dados, aprendendo conteúdos relacionados a Data Analytics, Python e aplicações contemplando Inteligência Artificial. Além dessas áreas mencionadas, o aluno pode atuar na área de infraestrutura e segurança da informação</p>
+            <h1 className="display-4">{data.home.topTitulo}</h1>
+            <p className="lead">{data.home.topSubTitulo}</p>
             <p className="lead">
-              <a href="/orcamento" className="btn btn-outline-primary btn-lg mt-4">Orçamento</a>
+              <a href={data.home.topLinkBtn} className="btn btn-outline-primary btn-lg mt-4">{data.home.topTextoBtn}</a>
             </p>
           </Container>
       </Jumbotron>
@@ -53,29 +56,29 @@ function Home() {
           </style>
         <Container className="text-center">
           <div>
-            <h2 className="display-4">Serviços</h2>
-            <p className="lead pb-4">O profissional de Sistemas de Informação administra fluxos de informação em qualquer rede de computadores, seja de empresas ou particulares. Ele desenvolve sistemas de armazenamento e recuperação de dados.</p>
+            <h2 className="display-4">{data.home.serTitulo}</h2>
+            <p className="lead pb-4">{data.home.serSubtitulo}</p>
             <div className="row">
               <div className="col-md-4">
                 <div className="rounded-circle circulo centralizar">
-                   <FontAwesomeIcon icon="database" />
+                   <FontAwesomeIcon icon={data.home.serUmIcone} />
                 </div>
-                  <h2 className="mt-4 mb-4">Serviço um</h2>
-                  <p>Desenvolvimento back-end</p>
+                  <h2 className="mt-4 mb-4">{data.home.serUmTitulo}</h2>
+                  <p>{data.home.serUmDesc}</p>
               </div>
               <div className="col-md-4">
               <div className="rounded-circle circulo centralizar">
-              <FontAwesomeIcon icon="paint-roller" />
+              <FontAwesomeIcon icon={data.home.serDoisIcone} />
                 </div>
-                  <h2 className="mt-4 mb-4">Serviço dois</h2>
-                    <p>Desenvolvimento front-end</p>
+                  <h2 className="mt-4 mb-4">{data.home.serDoisTitulo}</h2>
+                    <p>{data.home.serDoisDesc}</p>
                 </div>
                 <div className="col-md-4">
                    <div className="rounded-circle circulo centralizar">
-                   <FontAwesomeIcon icon="code" />
+                   <FontAwesomeIcon icon={data.home.serTresIcone} />
                    </div>
-                   <h2 className="mt-4 mb-4">Serviço tres</h2>
-                    <p>Desenvolvimento fullstack</p></div>
+                   <h2 className="mt-4 mb-4">{data.home.serTresTitulo}</h2>
+                    <p>{data.home.serTresDesc}</p></div>
                  </div>
                </div>
                   
@@ -85,6 +88,13 @@ function Home() {
       <Rodape />
        </div>
     );
+  }
+  
+  export async function getServerSideProps(){
+    const response = await fetch(`http://localhost:8080/home`)
+    const data = await response.json(); 
+
+    return { props: { data } };
   }
   
   export default Home;
