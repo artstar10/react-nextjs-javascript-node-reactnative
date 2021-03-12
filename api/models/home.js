@@ -42,7 +42,7 @@ const home = new Schema({
         type: String
     },
     
-    serTresDois: {
+    serTresIcone: {
         type: String
     },
     serTresTitulo: {
@@ -52,7 +52,7 @@ const home = new Schema({
         type: String
     },
 }, {
-    timestamps: true
+    timestamps: true,
 });
 
 mongoose.model('Home', home)
