@@ -57,7 +57,7 @@ app.post('/home', async (req, res) => {
         "serDoisDesc": "Desenvolvimento front-end.",
         "serTresIcone": "code",
         "serTresTitulo": "Serviço tres",
-        "serTresDesc": "Quisque elementum suscipit dolor, sed lobortis nibh. Curabitur et dui iaculis, consectetur enim vitae purus.",
+        "serTresDesc": "Desenvolvimento full-stack",
     }
 
     const homeExiste = await Home.findOne({});

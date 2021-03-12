@@ -18,8 +18,6 @@ function Home({ data }) {
                 <meta name="description" content="Site de ... sobre ..." />
           </Head>
           <Menu />
-
-          {console.log(data)}
           
           <Jumbotron fluid className="descr-top">
            <style>
@@ -80,9 +78,7 @@ function Home({ data }) {
                    <h2 className="mt-4 mb-4">{data.home.serTresTitulo}</h2>
                     <p>{data.home.serTresDesc}</p></div>
                  </div>
-               </div>
-                  
-               
+               </div>         
         </Container>
       </Jumbotron>
       <Rodape />

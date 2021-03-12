@@ -34,6 +34,9 @@ Rodar o projeto
  ### npm install --save @fontawesome/free-solid-svg-icons 
  ### npm install --save @fortawesome/react-fontawesome
 
+ 7º utilizacao de alertas 
+ https://reactstrap.github.io/components/alerts/
+
 
 
 
