@@ -44,19 +44,18 @@ app.get('/home', async (req, res) => {
 app.post('/home', async (req, res) => {
     const  dados = {
         "topTitulo": "Temos a solução que a sua empresa precisa!",
-        "topSubTitulo": "This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.",
-        "topTextoBtn": "This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.",
+        "topSubTitulo": "O curso de Sistemas de Informação ofere competências em várias áreas de conhecimento, como por exemplo, as áreas de Engenharia de Software, Governança de TI e Ciência de Dados. Em Engenharia de Software, o aluno aplica todos os conceitos para analise, programação e manutenção de aplicações de software nas plataformas web e mobile, com o devido conhecimento em metodologias ágeis, modelagem e projeto de sistemas, banco de dados e gerenciamento de projetos.",
+        "topTextoBtn": "Orçamento",
         "topLinkBtn": "http://localhost:3000/orcamento",
-
         "serTitulo": "Serviços",
-        "serSubtitulo": "Featured content or information",
-        "serUmIcone": "laptop-code",
+        "serSubtitulo": "O profissional de Sistemas de Informação administra fluxos de informação em qualquer rede de computadores, seja de empresas ou particulares. Ele desenvolve sistemas de armazenamento e recuperação de dados.",
+        "serUmIcone": "database",
         "serUmTitulo": "Serviço um",
-        "serUmDesc": "Praesent quis sagittis libero, nec suscipit neque. Quisque ut ultrices lectus, sit amet sollicitudin mauris.",
-        "serDoisIcone": "mobile-alt",
+        "serUmDesc": "Desenvolvimento back-end",
+        "serDoisIcone": "paint-roller",
         "serDoisTitulo": "Serviço dois",
-        "serDoisDesc": "Nullam rutrum imperdiet nisi, eget facilisis elit consectetur accumsan lectus, sit amet sollicdin efficitur.",
-        "serTresIcone": "network-wired",
+        "serDoisDesc": "Desenvolvimento front-end.",
+        "serTresIcone": "code",
         "serTresTitulo": "Serviço tres",
         "serTresDesc": "Quisque elementum suscipit dolor, sed lobortis nibh. Curabitur et dui iaculis, consectetur enim vitae purus.",
     }
